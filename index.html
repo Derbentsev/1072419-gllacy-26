@@ -3,44 +3,75 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
   <title>Gllacy Shop</title>
 </head>
 
 <body>
+  <h1 class="visually-hidden">Основная страница магазина Глейси</h1>
   <header class="header">
-    <nav class="navigation-header">
+    <nav class="nav-header">
       <a>
-        <img class="header-logo" src="img/svg/Logo.svg" width="100" height="50" alt="Логотип компании">
+        <img class="nav-logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
       </a>
 
       <ul class="header-links">
-        <li class="header-catalog"><a href="catalog.html">Каталог</a></li>
+        <li class="header-catalog"><a href="catalog.html">Каталог</a>
+          <ul>
+            <li>
+              <a href="">Новинки</a>
+            </li>
+            <li>
+              <a href="">Сливочное</a>
+            </li>
+            <li>
+              <a href="">Щербеты</a>
+            </li>
+            <li>
+              <a href="">Фруктовый лед</a>
+            </li>
+            <li>
+              <a href="">Мелорин</a>
+            </li>
+          </ul>
+        </li>
         <li class="header-delivery"><a href="">Доставка и оплата</a></li>
         <li class="header-info"><a href="">О комании</a></li>
       </ul>
 
       <ul class="header-buttons">
         <li class="header-search">
-          <button type="button">
-            <img src="img/svg/loupe.svg" height="20px" width="20px" alt="Поиск" />
-          </button>
+          <button type="button">Поиск</button>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <label for="search" class="visually-hidden">Строка поиска</label>
+            <input type="text" id="search" placeholder="Что ищем?" />
+          </form>
         </li>
         <li class="header-enter">
-          <button type="button">
-            <img src="img/svg/entrance.svg" height="20px" width="20px" alt="Вход" />
-          </button>
+          <button type="button">Вход</button>
+          <form method="post" action="https://echo.htmlacademy.ru">
+            <p>
+              <label for="email" class="visually-hidden">Логин</label>
+              <input type="email" id="email" placeholder="Электронная почта" required />
+            </p>
+            <p>
+              <label for="password" class="visually-hidden">Пароль</label>
+              <input type="password" id="password" placeholder="Пароль" required />
+            </p>
+            <button type="submit">Войти</button>
+            <a href="">Забыли пароль</a>
+            <a href="">Новая регистрация</a>
+          </form>
         </li>
         <li class="header-basket">
-          <button type="button">
-            <img src="img/svg/basket.svg" height="20px" width="20px" alt="Корзина" />
-          </button>
+          <button type="button">Корзина</button>
         </li>
       </ul>
 
-      <ul class="header-work-time">
-        <li>С 10 до 20, ежедневно</li>
-        <li>8 812 450-25-25</li>
-      </ul>
+      <div class="header-work-time">
+        <p>С 10 до 20, ежедневно</p>
+        <p><a href="tel:88124502525">8 812 450-25-25</a></p>
+      </div>
     </nav>
   </header>
 
@@ -70,22 +101,23 @@
       </ul>
     </section>
 
-    <section class="section-news" style="border: 5px solid green">
-      <h4 class="heading-news"><a href="">Новое в нашем блоге</a></h4>
+    <section class="section-news">
+      <h2 class="heading-news"><a href="">Новое в нашем блоге</a></h2>
       <p class="top-news"><a href="">10 способов сервировки фруктовых щербетов к столу</a></p>
     </section>
 
-    <section class="section-email" style="border: 5px solid green">
-      <h2>Рассылка</h2>
+    <section class="section-email">
+      <h3>Рассылка</h3>
       <p class="section-email-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
         всякой ненужной ерунды. Честно=)
       </p>
-      <p>
+      <form method="post" action="https://echo.htmlacademy.ru">
         <input class="input-email" type="email" placeholder="Электронная почта" />
-        <button class="input-email-button" type="button">Отправить</button>
-      </p>
+        <button class="input-email-button" type="submit">Отправить</button>
+      </form>
     </section>
+
 
     <!-- КАК Я ПОНЯЛ ПО ЗАДАНИЮ, ЭТУ ОБЛАСТЬ ПОКА НЕ РАЗМЕЧАЕМ-->
   </main>
@@ -93,24 +125,16 @@
   <footer>
     <ul class="footer-networks">
       <li class="twitter">
-        <a href="">
-          <img src="img/svg/twitter.svg" alt="Твиттер" />
-        </a>
+        <a href="" aria-label="Наш Твиттер">Твиттер</a>
       </li>
       <li class="instagram">
-        <a href="">
-          <img src="img/svg/instagram.svg" alt="Инстаграм" />
-        </a>
+        <a href="" aria-label="Наш Инстаграмм">Инстаграм</a>
       </li>
       <li class="facebook">
-        <a href="">
-          <img src="img/svg/fb.svg" alt="Фейсбук" />
-        </a>
+        <a href="" aria-label="Наш Фейсбук">Фейсбук</a>
       </li>
       <li class="vkontakte">
-        <a href="">
-          <img src="img/svg/vk.svg" alt="Вконтакте" />
-        </a>
+        <a href="" aria-label="Наш Вконтакте">Вконтакте</a>
       </li>
     </ul>
 
@@ -129,74 +153,27 @@
     </div>
   </footer>
 
+  <!--Popup окна-->
   <section>
-      <h3 class="visually-hidden">Каталог</h3>
-      <ul>
-        <li>
-          <a href="">Новинки</a>
-        </li>
-        <li>
-          <a href="">Сливочное</a>
-        </li>
-        <li>
-          <a href="">Щербеты</a>
-        </li>
-        <li>
-          <a href="">Фруктовый лед</a>
-        </li>
-        <li>
-          <a href="">Мелорин</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <label for="search" class="visually-hidden">Строка поиска</label>
-      <input type="text" id="search" placeholder="Что ищем" />
-    </section>
-
-    <section>
-      <h3 class="visually-hidden">Вход в личный кабинет</h3>
-      <form method="post">
-        <p>
-          <label for="email" class="visually-hidden">Логин</label>
-          <input type="email" id="email" placeholder="Электронная почта" required />
-        </p>
-        <p>
-          <label for="password" class="visually-hidden">Пароль</label>
-          <input type="password" id="password" placeholder="Пароль" required />
-        </p>
-        <a href="">Войти</a>
-        <a href="">Забыли пароль</a>
-        <a href="">Новая регистрация</a>
-      </form>
-    </section>
-
-    <section>
-      <h3 class="visually-hidden">Форма обратной связи</h3>
-      <p>Мы обязательно вам ответим!</p>
-      <form method="post">
-        <p>
-          <label for="name-feedback" class="visually-hidden">Имя</label>
-          <input type="text" id="name-feedback"" placeholder=" Как вас зовут?" requierd />
-        </p>
-        <p>
-          <label for="email-feedback" class="visually-hidden">Email</label>
-          <input type="email-feedback" id="email" placeholder="Ваша почта для ответа?" required />
-        </p>
-        <p>
-          <label for="text-feedback" class="visually-hidden">Обратная связь</label>
-          <textarea id="text-feedback" rows="5" placeholder="Напишите что-нибудь..." required></textarea>
-        </p>
-        <button type="submit">Отправить</button>
-      </form>
-    </section>
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p class="visually-hidden">Форма обратной связи</p>
+    <p>Мы обязательно вам ответим!</p>
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <p>
+        <label for="name-feedback" class="visually-hidden">Имя</label>
+        <input type="text" id="name-feedback" placeholder="Как вас зовут?" required />
+      </p>
+      <p>
+        <label for="email-feedback" class="visually-hidden">Email</label>
+        <input type="email" id="email-feedback" placeholder="Ваша почта для ответа?" required />
+      </p>
+      <p>
+        <label for="text-feedback" class="visually-hidden">Обратная связь</label>
+        <textarea id="text-feedback" rows="5" placeholder="Напишите что-нибудь..." required></textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 </body>
 
 </html>
-
-<style>
-  body {
-    background-color: lightskyblue;
-  }
-</style>
