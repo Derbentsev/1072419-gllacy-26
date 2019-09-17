@@ -132,32 +132,44 @@
 
         <h1>Сливочное мороженое</h1>
 
-        <form method="post" action="https://echo.htmlacademy.ru">
-            <label for="sorting">Сортировка</label>
-            <select>
-                <option id="sorting" value="by_popular">по популярности</option>
-            </select>
+        <section>
+            <h2 class="visually-hidden">Фильтры и сортировки</h2>
+            <form method="post" action="https://echo.htmlacademy.ru">
+                <label for="sorting">Сортировка</label>
+                <select>
+                    <option id="sorting" value="by_popular">по популярности</option>
+                    <option id="sorting" value="cheap">сначала недорогие</option>
+                    <option id="sorting" value="expensive">сначала дорогие</option>
+                    <option id="by_fatness" value="by_fatness">по жирности</option>
+                </select>
+        
+                <label for="price">Цена:
+                    <input type="number" value="100" /> руб. -
+                    <input type="number" value="500" /> руб.
+                </label>
+                <button>Ползунок слева</button>
+                <button>Ползунок справа</button>
+        
+                <span>Жирность:</span>
+                <input type="radio" id="fatness-1" value="0" /><label for="fatness-1">0%</label>
+                <input type="radio" id="fatness-2" value="10" checked /><label for="fatness-2">10%</label>
+                <input type="radio" id="fatness-3" value="30" /><label for="fatness-3">30%</label>
+                <input type="radio" id="fatness-4" value="more than 30" /><label for="fatness-4">выше 30%</label>
+        
+                <p>
+                    <span>Наполнители:</span>
+                    <input type="checkbox" id="chocolate" checked /><label for="chocolate">шоколадные</label>
+                    <input type="checkbox" id="sugar" checked /><label for="sugar">сахарные присыпки</label>
+                    <input type="checkbox" id="syrup" /><label for="syrup">сиропы</label>
+                    <input type="checkbox" id="jam" /><label for="jam">джемы</label>
+                </p>
+        
+                <button type="submit">Применить</button>
+            </form>
+        </section>
 
-            <label for="price">Цена: 100 руб. - 500 руб.</label>
-            <input type="range" id="price" min="100" max="500" step="10" />
-
-            <label for="fatness">Жирность:</label>
-            <input type="radio" name="fatness" value="0" />0%
-            <input type="radio" name="fatness" value="10" checked />10%
-            <input type="radio" name="fatness" value="30" />30%
-            <input type="radio" name="fatness" value="more than 30" />выше 30%
-
-            <p>
-            <label for="fillers">Наполнители:</label>
-            <input type="checkbox" value="chocolate" checked />шоколадные
-            <input type="checkbox" value="sugar" checked />сахарные присыпки
-            <input type="checkbox" value="syrup" />сиропы
-            <input type="checkbox" value="jam" />джемы
-            </p>
-
-            <button type="submit">Применить</button>
-        </form>
-
+        <section>
+            <h2 class="visually-hidden">Результаты поиска</h2>
         <ul class="main-table-catalog">
             <li>
                 <p>
@@ -267,15 +279,30 @@
                 <h3 class="product-name"><a href="">Сливочное с мятным сиропом</a></h3>
             </li>
         </ul>
+    </section>
 
         <ol>
-            <button type="button">&lt;</button>
-            <button type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">&gt;</button>
+            <li>
+                <a class="visually-hidden">&lt;</a>
+            </li>
+            <li>
+                <a>1</a>
+            </li>
+            <li>
+                <a href="">2</a>
+            </li>
+            <li>
+                <a href="">3</a>
+            </li>
+            <li>
+                <a href="">4</a>
+            </li>
+            <li>
+                <a href="">5</a>
+            </li>
+            <li>
+                <a href="">&gt;</a>
+            </li>
         </ol>
     </main>
 
