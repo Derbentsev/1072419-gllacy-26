@@ -113,7 +113,6 @@
                         <button type="submit">Оформить заказ</button>
                     </form>
                 </section>
-
                 </li>
               </ul>
 
@@ -132,6 +131,33 @@
         </ul>
 
         <h1>Сливочное мороженое</h1>
+
+        <form method="post" action="https://echo.htmlacademy.ru">
+            <label for="sorting">Сортировка</label>
+            <select>
+                <option id="sorting" value="by_popular">по популярности</option>
+            </select>
+
+            <label for="price">Цена: 100 руб. - 500 руб.</label>
+            <input type="range" id="price" min="100" max="500" step="10" />
+
+            <label for="fatness">Жирность:</label>
+            <input type="radio" name="fatness" value="0" />0%
+            <input type="radio" name="fatness" value="10" checked />10%
+            <input type="radio" name="fatness" value="30" />30%
+            <input type="radio" name="fatness" value="more than 30" />выше 30%
+
+            <p>
+            <label for="fillers">Наполнители:</label>
+            <input type="checkbox" value="chocolate" checked />шоколадные
+            <input type="checkbox" value="sugar" checked />сахарные присыпки
+            <input type="checkbox" value="syrup" checked />сиропы
+            <input type="checkbox" value="jam" checked />джемы
+            </p>
+
+            <button type="submit">Применить</button>
+        </form>
+
         <ul class="main-table-catalog">
             <li>
                 <p>
@@ -242,7 +268,15 @@
             </li>
         </ul>
 
-        <!-- КАК Я ПОНЯЛ ПО ЗАДАНИЮ, ЭТУ ОБЛАСТЬ ПОКА НЕ РАЗМЕЧАЕМ-->
+        <ol>
+            <button type="button">&lt;</button>
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">&gt;</button>
+        </ol>
     </main>
 
     <footer>
