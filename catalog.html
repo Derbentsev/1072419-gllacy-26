@@ -92,9 +92,8 @@
                                         <button type="button" value="Удалить товар из корзины">X</button>
                                     </td>
                                     <td>
-                                        <img src="img/png/product-3.png"
-                                            alt="Клубничный пломбир с присыпкой из белого шоколада" height="33"
-                                            width="33" />
+                                        <img src="img/png/product-3.png" alt="Клубничный пломбир с присыпкой из белого шоколада" 
+                                        height="33" width="33" />
                                     </td>
                                     <td>
                                         <input type="text" value="Клубничный пломбир с присыпкой из белого шоколада"
@@ -146,11 +145,13 @@
 
                 <p>Цена:</p>
                 <p>
-                    <input type="number" value="100" /> руб. -
-                    <input type="number" value="500" /> руб.
+                    <label for="price_from" class="visually-hidden"></label>
+                    <input type="number" id="price_from" value="100" /> руб. -
+                    <label for="price_to" class="visually-hidden"></label>
+                    <input type="number" id="price_to" value="500" /> руб.
                 </p>
-                <button>Ползунок слева</button>
-                <button>Ползунок справа</button>
+                <button>Цена от</button>
+                <button>Цена до</button>
 
                 <p>Жирность:</p>
                 <input type="radio" id="fatness-1" value="0" /><label for="fatness-1">0%</label>
@@ -283,7 +284,10 @@
 
         <ol>
             <li>
-                <a class="visually-hidden">&lt;</a>
+                <a class="visually-hidden">
+                    &lt;
+                    <span class="visually-hidden">на предыдущую страницу</span>
+                </a>
             </li>
             <li>
                 <a>1</a>
@@ -301,7 +305,10 @@
                 <a href="">5</a>
             </li>
             <li>
-                <a href="">&gt;</a>
+                <a href="">
+                    &gt;
+                    <span class="visually-hidden">на следующую страницу</span>
+                </a>
             </li>
         </ol>
     </main>
@@ -309,16 +316,24 @@
     <footer>
         <ul class="footer-networks">
             <li class="twitter">
-                <a href="" aria-label="Наш Твиттер"><span class="visually-hidden">Мы в Твиттере</span></a>
+                <a href="" aria-label="Наш Твиттер">
+                    <span class="visually-hidden">Мы в Твиттере</span>
+                </a>
             </li>
             <li class="instagram">
-                <a href="" aria-label="Наш Инстаграмм"><span class="visually-hidden">Мы в Инстаграмме</span></a>
+                <a href="" aria-label="Наш Инстаграмм">
+                    <span class="visually-hidden">Мы в Инстаграмме</span>
+                </a>
             </li>
             <li class="facebook">
-                <a href="" aria-label="Наш Фейсбук"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+                <a href="" aria-label="Наш Фейсбук">
+                    <span class="visually-hidden">Мы в Фейсбуке</span>
+                </a>
             </li>
             <li class="vkontakte">
-                <a href="" aria-label="Наш Вконтакте"><span class="visually-hidden">Мы Вконтакте</span></a>
+                <a href="" aria-label="Наш Вконтакте">
+                    <span class="visually-hidden">Мы Вконтакте</span>
+                </a>
             </li>
         </ul>
 
