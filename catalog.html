@@ -3,19 +3,21 @@
 
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Gllacy Shop</title>
 </head>
 
 <body>
     <h1 class="visually-hidden">Каталог товаров</h1>
-    <header class="header">
-        <nav class="nav-header">
+    <header class="main-header">
+        <nav class="main-navigation">
             <a href="index.html">
                 <img class="nav-logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
             </a>
 
-            <ul class="header-links">
+            <ul class="site-navigation">
                 <li class="header-catalog"><a href="">Каталог</a>
                     <ul>
                         <li>
@@ -39,7 +41,7 @@
                 <li class="header-info"><a href="">О комании</a></li>
             </ul>
 
-            <ul class="header-buttons">
+            <ul class="user-navigation">
                 <li class="header-search">
                     <a href="">Поиск</a>
                     <form method="post" action="https://echo.htmlacademy.ru">
@@ -115,16 +117,15 @@
                     </section>
                 </li>
             </ul>
-            
-
-            <div class="header-work-time">
-                <p>С 10 до 20, ежедневно</p>
-                <p><a href="tel:88124502525">8 812 450-25-25</a></p>
-            </div>
         </nav>
     </header>
 
     <main>
+        <div class="work-time-telephone">
+            <p class="work-time">С 10 до 20, ежедневно</p>
+            <p class="telephone"><a href="tel:88124502525">8 812 450-25-25</a></p>
+        </div>
+    
         <ul class="bread-crumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="">Каталог</a></li>

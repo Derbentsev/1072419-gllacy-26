@@ -1,3 +1,135 @@
 body {
-  background-color: lightskyblue;
+  margin:0;
+  padding:0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #ffffff;
+  background-color: #849d8f;
 }
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+/*HEAD*/
+.main-navigation{
+  line-height: 18px;
+}
+
+.site-navigation, 
+.user-navigation{
+  list-style: none;
+  font-family: "Robo-Bold", Arial, sans-serif;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus{
+  color: #323232;
+}
+/*HEAD*/
+
+/*BODY*/
+.work-time{
+  font-size: 14px;
+}
+
+.telephone{
+  font-size: 22px;
+}
+
+.promo-two-by-one-list li{
+  list-style: none;
+  text-align: center;
+}
+
+.promo-two-by-one-list p{
+  font-family: "Robo-Bold", Arial, sans-serif;
+  font-size: 60px;
+}
+
+.promo-two-by-one-list a{
+  font-family: "Robo-Bold", Arial, sans-serif;
+  font-size: 32px;
+  line-height: 60px;
+}
+
+.promo-raspberry{
+  background-image: url("/img/jpeg/raspberries-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo-chocolate{
+  background-image: url("/img/jpeg/chokolate-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo-raspberry p:nth-child(1),
+.promo-chocolate p:nth-child(1){
+  font-size: 35px;
+  line-height: 41px;
+  text-align: left;
+}
+
+.promo-raspberry p:nth-child(2),
+.promo-chocolate p:nth-child(2){
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.promo-raspberry a,
+.promo-chocolate a{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.hits-list{
+  list-style: none;
+}
+
+.product-price{
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.advantages{
+  background-image: url("/img/png/wafer-background.png");
+  background-repeat: no-repeat;
+  color: #323232;
+}
+
+.advantages h3{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.advantages-list{
+  list-style:none;
+}
+
+.news{
+  background-image: url("/img/jpeg/strawberry-background.jpg");
+  background-repeat: no-repeat;
+  color: #323232;
+}
+/*BODY*/
+
+/*FOOTER*/
+
+/*FOOTER*/

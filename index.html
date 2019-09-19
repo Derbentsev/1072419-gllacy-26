@@ -3,21 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <title>Gllacy Shop</title>
 </head>
 
 <body>
   <h1 class="visually-hidden">Глейси - интернет-магазин мороженого</h1>
-  <header class="header">
-    <nav class="nav-header">
+  <header class="main-header">
+    <nav class="main-navigation">
       <a>
         <img class="nav-logo" src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
       </a>
 
-      <ul class="header-links">
+      <ul class="site-navigation">
         <li class="header-catalog"><a href="">Каталог</a>
-          <ul>
+          <ul class="catalog-navigation">
             <li>
               <a href="">Новинки</a>
             </li>
@@ -35,11 +37,15 @@
             </li>
           </ul>
         </li>
-        <li class="header-delivery"><a href="">Доставка и оплата</a></li>
-        <li class="header-info"><a href="">О комании</a></li>
+        <li class="header-delivery">
+          <a href="">Доставка и оплата</a>
+        </li>
+        <li class="header-info">
+          <a href="">О комании</a>
+        </li>
       </ul>
 
-      <ul class="header-buttons">
+      <ul class="user-navigation">
         <li class="header-search">
           <a href="">Поиск</a>
           <form method="post" action="https://echo.htmlacademy.ru">
@@ -67,18 +73,18 @@
           <a href="">Корзина</a>
         </li>
       </ul>
-
-      <div class="header-work-time">
-        <p>С 10 до 20, ежедневно</p>
-        <p><a href="tel:88124502525">8 812 450-25-25</a></p>
-      </div>
     </nav>
   </header>
 
   <main>
-    <section>
+    <div class="work-time-telephone">
+      <p class="work-time">С 10 до 20, ежедневно</p>
+      <p class="telephone"><a href="tel:88124502525">8 812 450-25-25</a></p>
+    </div>
+  
+    <section class="promo-two-by-one">
       <h2 class="visually-hidden">Акция - Дайте оба!</h2>
-      <ul>
+      <ul class="promo-two-by-one-list">
         <li>
           <p>Крем-брюле и пломбир с малиновым джемом</p>
           <a href="">Дайте оба!</a>
@@ -92,15 +98,20 @@
           <a href="">Дайте оба!</a>
         </li>
       </ul>
-      
-      <button><span class="visually-hidden">Слайд 1</span></button>
-      <button><span class="visually-hidden">Слайд 2</span></button>
-      <button><span class="visually-hidden">Слайд 3</span></button>
+      <button>
+        <span class="visually-hidden">Слайд 1</span>
+      </button>
+      <button>
+        <span class="visually-hidden">Слайд 2</span>
+      </button>
+      <button>
+        <span class="visually-hidden">Слайд 3</span>
+      </button>
     </section>
 
-    <section>
+    <section class="promo-gift">
       <h2 class="visually-hidden">Акция - Подарок при покупке</h2>
-      <div>
+      <div class="promo-raspberry">
         <p>Малинка даром!</p>
         <p>
           При покупке 2 кг любого фруктового мороженого, добавляем
@@ -108,8 +119,7 @@
         </p>
         <a href="">Хочу варенье!</a>
       </div>
-
-      <div>
+      <div class="promo-chocolate">
         <p>Шоколадки даром!</p>
         <p>
           При покупке 2 кг пломбира, добавим в ваш заказ упаковку
@@ -119,78 +129,89 @@
       </div>
     </section>
 
-    <section>
+    <section class="hits">
       <h2 class="visually-hidden">Хиты продаж</h2>
-      <ul class="main-table-catalog">
+      <ul class="hits-list">
         <li>
           <p>
             <img class="main-product-img" src="img/png/product-1.png" height="267" width="267"
               alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <span class="product-price">310Р/кг</span>
+            <span class="product-price">310&#8381;/кг</span>
           </p>
-          <h3 class="product-name"><a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <h3 class="product-name">
+            <a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </h3>
         </li>
 
         <li>
           <p>
             <img class="main-product-img" src="img/png/product-2.png" height="267" width="267"
               alt="Сливочно-кофейное с кусочками шоколада">
-            <span class="product-price">380Р/кг</span>
+            <span class="product-price">380&#8381;/кг</span>
           </p>
-          <h3 class="product-name"><a href="">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <h3 class="product-name">
+            <a href="">Сливочно-кофейное с кусочками шоколада</a>
+          </h3>
         </li>
 
         <li>
           <p>
             <img class="main-product-img" src="img/png/product-3.png" height="267" width="267"
               alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <span class="product-price">355Р/кг</span>
+            <span class="product-price">355&#8381;/кг</span>
           </p>
-          <h3 class="product-name"><a href="">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+          <h3 class="product-name">
+            <a href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </h3>
         </li>
 
         <li>
           <p>
             <img class="main-product-img" src="img/png/product-4.png" height="267" width="267"
               alt="Сливочное крем-брюле с карамельной подливкой">
-            <span class="product-price">415Р/кг</span>
+            <span class="product-price">415&#8381;/кг</span>
           </p>
-          <h3 class="product-name"><a href="">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <h3 class="product-name">
+            <a href="">Сливочное крем-брюле с карамельной подливкой</a>
+          </h3>
         </li>
       </ul>
     </section>
 
-    <section class="advantages">
-      <h2>Преимущества магазина Глейси</h2>
+        <section class="advantages">
+            <h2 class="visually-hidden">Преимущества магазина Глейси</h2>
+            <h3>Магазин Глэйси - это онлайн- и офлайн- магазин
+              по продаже мороженого собственного производства на развес
+            </h3>
+      
+            <ul class="advantages-list">
+              <li class="advantage">Все наше мороженое изготавливается на собственном
+                производстве, с использованием современного оборудования и
+                проверенных временем технологий.</li>
+              <li class="advantage">Для приготовления мороженого используются настоящие сливки и
+                молоко высочайшего качества. Все дополнительные ингредиенты и
+                добавки произведены из натурального, экологически чистого сырья.</li>
+              <li class="advantage">Закупка ингредиентов производится только у проверенных
+                фермерских хозяйств и компаний, с которыми нас связывает
+                долговременное сотрудничество.</li>
+              <li class="advantage">Доставка нашего мороженого до заказчиков осуществляется в
+                специальном термопаке, который не дает мороженому растаять в
+                пути и позволяет сохранить превосходный вкус.</li>
+            </ul>
+          </section>
 
-      <h3>Магазин Глэйси - это онлайн- и офлайн- магазин
-        по продаже мороженого собственного производства на развес
-      </h3>
-
-      <ul>
-        <li class="advantage">Все наше мороженое изготавливается на собственном
-          производстве, с использованием современного оборудования и
-          проверенных временем технологий.</li>
-        <li class="advantage">Для приготовления мороженого используются настоящие сливки и
-          молоко высочайшего качества. Все дополнительные ингредиенты и
-          добавки произведены из натурального, экологически чистого сырья.</li>
-        <li class="advantage">Закупка ингредиентов производится только у проверенных
-          фермерских хозяйств и компаний, с которыми нас связывает
-          долговременное сотрудничество.</li>
-        <li class="advantage">Доставка нашего мороженого до заказчиков осуществляется в
-          специальном термопаке, который не дает мороженому растаять в
-          пути и позволяет сохранить превосходный вкус.</li>
-      </ul>
+    <section class="news">
+      <h2 class="heading-news">
+        <a href="">Новое в нашем блоге</a>
+      </h2>
+      <p class="top-news">
+        <a href="">10 способов сервировки фруктовых щербетов к столу</a>
+      </p>
     </section>
 
-    <section class="section-news">
-      <h2 class="heading-news"><a href="">Новое в нашем блоге</a></h2>
-      <p class="top-news"><a href="">10 способов сервировки фруктовых щербетов к столу</a></p>
-    </section>
-
-    <section class="section-email">
+    <section class="subscription">
       <h2>Рассылка</h2>
-      <p class="section-email-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
+      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
         самого вкусного, что у нас происходит. Обещаем не спамить и не слать
         всякой ненужной ерунды. Честно=)
       </p>
