@@ -19,7 +19,7 @@
 
       <ul class="site-navigation">
         <li>
-          <a href="" class="site-navigation-item">Каталог</a>
+          <a href="" class="site-navigation-link">Каталог</a>
           <ul class="catalog-navigation form">
             <li>
               <a href="" class="catalog-navigation-item novelty">Новинки</a>
@@ -39,16 +39,18 @@
           </ul>
         </li>
         <li>
-          <a href="" class="site-navigation-item">Доставка и оплата</a>
+          <a href="" class="site-navigation-link">Доставка и оплата</a>
         </li>
         <li>
-          <a href="" class="site-navigation-item">О комании</a>
+          <a href="" class="site-navigation-link">О комании</a>
         </li>
       </ul>
 
       <ul class="user-navigation">
         <li>
-          <a href="" class="user-navigation-item">Поиск</a>
+          <a href="" class="user-navigation-link">
+            <span class="visually-hidden">Поиск</span>
+          </a>
           <div class="search-form form">
             <form method="post" action="https://echo.htmlacademy.ru">
               <label for="search" class="visually-hidden">Строка поиска</label>
@@ -57,7 +59,7 @@
           </div>
         </li>
         <li>
-          <a href="" class="user-navigation-item">Вход</a>
+          <a href="" class="user-navigation-link">Вход</a>
           <div class="enter-form form">
           <form method="post" action="https://echo.htmlacademy.ru">
             <p>
@@ -69,14 +71,13 @@
               <input class="input" type="password" id="password" placeholder="Пароль" required />
             </p>
             <a href="" class="button registration-button">Войти</a>
-            <!--Не работает наведение в двух ссылках ниже-->
             <a href="" class="registration link-on-white">Забыли пароль?</a>
             <a href="" class="registration link-on-white">Новая регистрация</a>
           </form>
         </div>
         </li>
         <li>
-          <a href="" class="user-navigation-item">Корзина</a>
+          <a href="" class="user-navigation-link">Корзина</a>
         </li>
       </ul>
     </nav>
@@ -85,8 +86,8 @@
   <main>
     <div class="work-time-telephone">
       <p class="work-time">С 10 до 20, ежедневно</p>
-      <p class="telephone">
-        <a href="tel:88124502525">8 812 450-25-25</a>
+      <p>
+        <a class="telephone" href="tel:88124502525">8 812 450-25-25</a>
       </p>
     </div>
 
@@ -95,51 +96,51 @@
       <ul class="promo-two-by-one-list">
         <li>
           <div class="promo-image-1">
-            <p>Крем-брюле и пломбир с малиновым джемом</p>
-            <a href="" class="button">Дайте оба!</a>
+            <p class="promo-text">Крем-брюле и пломбир с малиновым джемом</p>
+            <a href="" class="button promo-button">Дайте оба!</a>
           </div>
         </li>
         <li>
           <div class="promo-image-2">
-            <p>Шоколадный пломбир и лимонный сорбет</p>
-            <a href="" class="button">Дайте оба!</a>
+            <p class="promo-text">Шоколадный пломбир и лимонный сорбет</p>
+            <a href="" class="button promo-button">Дайте оба!</a>
           </div>
         </li>
         <li>
           <div class="promo-image-3">
-            <p>Пломбир с помадкой и клубничный щербет</p>
-            <a href="" class="button">Дайте оба!</a>
+            <p class="promo-text">Пломбир с помадкой и клубничный щербет</p>
+            <a href="" class="button promo-button">Дайте оба!</a>
           </div>
         </li>
       </ul>
-      <button>
+      <button class="slide">
         <span class="visually-hidden">Слайд 1</span>
       </button>
-      <button>
+      <button class="slide">
         <span class="visually-hidden">Слайд 2</span>
       </button>
-      <button>
+      <button class="slide">
         <span class="visually-hidden">Слайд 3</span>
       </button>
     </section>
 
     <section class="promo-gift">
       <h2 class="visually-hidden">Акция - Подарок при покупке</h2>
-      <div class="promo-raspberry">
-        <p>Малинка даром!</p>
-        <p>
+      <div class="promo-gift-block-1">
+        <p class="promo-gift-name">Малинка даром!</p>
+        <p class="promo-gift-text">
           При покупке 2 кг любого фруктового мороженого, добавляем
           в ваш заказ банку малинового варенья бесплатно.
         </p>
-        <a class="button" href="">Хочу варенье!</a>
+        <a class="button promo-gift-button" href="">Хочу варенье!</a>
       </div>
-      <div class="promo-chocolate">
-        <p>Шоколадки даром!</p>
-        <p>
+      <div class="promo-gift-block-2">
+        <p class="promo-gift-name">Шоколадки даром!</p>
+        <p class="promo-gift-text">
           При покупке 2 кг пломбира, добавим в ваш заказ упаковку
           вкуснейшей шоколадной присыпки совершенно бесплатно.
         </p>
-        <a class="button" href="">Хочу шоколадки!</a>
+        <a class="button promo-gift-button" href="">Хочу шоколадки!</a>
       </div>
     </section>
 
@@ -155,7 +156,7 @@
           <p>
             <a href="" class="product-name link">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </p>
-          <a href="" class="button">Быстрый просмотр</a>
+          <button type="button" class="button">Быстрый просмотр</button>
         </li>
 
         <li class="hits-li">
@@ -167,7 +168,7 @@
           <p>
             <a href="" class="product-name link">Сливочно-кофейное с кусочками шоколада</a>
           </p>
-          <a href="" class="button">Быстрый просмотр</a>
+          <button type="button" class="button">Быстрый просмотр</button>
         </li>
 
         <li class="hits-li">
@@ -179,7 +180,7 @@
           <p>
             <a href="" class="product-name link">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </p>
-          <a href="" class="button">Быстрый просмотр</a>
+          <button type="button" class="button">Быстрый просмотр</button>
         </li>
 
         <li class="hits-li">
@@ -191,7 +192,7 @@
           <p>
             <a href="" class="product-name link">Сливочное крем-брюле с карамельной подливкой</a>
           </p>
-          <a href="" class="button">Быстрый просмотр</a>
+          <button type="button" class="button">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -223,7 +224,7 @@
         <a href="">Новое в нашем блоге</a>
       </h2>
       <p class="top-news">
-        <a href="">10 способов сервировки фруктовых щербетов к столу</a>
+        <a href="" class="link">10 способов сервировки фруктовых щербетов к столу</a>
       </p>
     </section>
 
@@ -257,7 +258,7 @@
   </main>
 
   <footer class="footer">
-    <ul class="footer-networks">
+    <ul class="footer-social">
       <li class="twitter">
         <a href="" aria-label="Наш Твиттер">
           <span class="visually-hidden">Мы в Твиттере</span>
