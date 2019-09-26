@@ -170,6 +170,18 @@ a{
   border-radius: 5px;
 }
 
+.search-input{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+.email-input,
+.password-input{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .registration-button{
   font-size: 18px
 }
@@ -178,7 +190,6 @@ a{
   color: #323232;
   font-weight: normal;
 }
-
 /*HEADER*/
 
 /*MAIN*/
@@ -211,12 +222,15 @@ a{
 }
 .promo-image-1{
   background-image: url("../img/png/ice-cream-font-image-1.png");
+  background-repeat: no-repeat;
 }
 .promo-image-2{
   background-image: url("../img/png/ice-cream-font-image-2.png");
+  background-repeat: no-repeat;
 }
 .promo-image-3{
   background-image: url("../img/png/ice-cream-font-image-3.png");
+  background-repeat: no-repeat;
 }
 
 .slide{
@@ -358,6 +372,9 @@ a{
   border: solid 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   resize: none;
+}
+.feedback-input{
+  font-weight: 400;
 }
 /*POPUP*/
 
