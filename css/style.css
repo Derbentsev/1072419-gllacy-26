@@ -105,6 +105,49 @@ a{
 /*GLOBAL*/
 
 /*HEADER*/
+/*для сеток*/
+.header-container{
+  min-height: 72px;
+  border-bottom: 2px solid red;
+  width: 1140px;
+}
+.navigation{
+  display: flex;
+  flex-direction: row;
+
+  min-height: 45px;
+  border-bottom: 3px solid black;
+}
+.header-logo{
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+
+  outline: 2px solid yellow;
+}
+.site-navigation{
+  margin:0;
+  padding: 0;
+  margin-left: 20px;
+
+  min-height: 45px;
+  outline: 2px solid yellow;
+}
+.catalog-navigation form{
+  width: 143px;
+  height: 171px;
+}
+.user-navigation{
+  margin:0;
+  padding: 0;
+  width: 270px;
+
+  min-height: 45px;
+  margin-left: auto;
+  outline: 2px solid yellow;
+}
+/*для сеток*/
+
 .site-navigation, 
 .user-navigation{
   list-style: none;
@@ -193,6 +236,40 @@ a{
 /*HEADER*/
 
 /*MAIN*/
+/*для сеток*/
+.promo-two-by-one{
+  min-height: 570px;
+  outline: 2px solid blue;
+}
+
+.promo-gift{
+  display: flex;
+  justify-content: space-between;
+  outline: 2px solid red;
+}
+.promo-gift-block-1{
+  width: 560px;
+  height: 229px;
+  outline: 2px solid yellow;
+
+  background-image: none;
+}
+.promo-gift-block-2{
+  width: 560px;
+  height: 229px;
+  outline: 2px solid yellow;
+
+  background-image: none;
+}
+/*для сеток*/
+
+.main-container{
+  width: 1140px;
+}
+
+.work-time-telephone{
+  text-align: right;
+}
 .work-time{
   font-size: 14px;
 }
@@ -267,24 +344,37 @@ a{
   line-height: 24px;
 }
 
-.hits-list,
-.main-table-catalog{
+.hits-list{
   list-style: none;
 }
 .product-price{
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-weight: bold;
 }
 .kg{
   line-height: 45px;
   font-size: 30px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
+  font-weight: bold;
 }
 .product-name{
   color: white;
   font-size: 16px;
   line-height: 22px;
+}
+.hits-list{
+  display: flex;
+  outline: 2px solid black;
+  justify-content: space-between;
+
+}
+.hits-li{
+  width: 267px;
+  height: 440px;
+
+  outline: 2px solid yellow;
 }
 
 .advantages{
@@ -292,6 +382,12 @@ a{
   background-repeat: no-repeat;
   color: #323232;
   border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  width: 1146px;
+  height: 306px;
+  outline: 2px solid red;
 }
 .advantages h3{
   font-size: 24px;
@@ -305,11 +401,20 @@ a{
   background-color: rgba(248, 247, 244, 0.4);
 }
 
+.news-subscription{
+  display: flex;
+  justify-content: space-between;
+  width: 1140px;
+}
 .news{
   background-image: url("../img/png/news-background.png");
   background-repeat: no-repeat;
   background-color: #f8f7f4;
   border-radius: 15px;
+  width: 560px;
+  height: 220px;
+
+  outline: 2px solid yellow;
 }
 .news-head{
   font-size: 16px;
@@ -332,6 +437,10 @@ a{
   border-radius: 10px;
   background-image: url("../img/png/post-background.png");
   background-repeat: no-repeat;
+  width: 560px;
+  height: 220px;
+
+  outline: 2px solid yellow;
 }
 .subscription-text{
   color: #5a5a5a;
@@ -339,8 +448,14 @@ a{
   line-height: 22px;
 }
 
+.map{
+  display:flex;
+}
 .address{
   background-color: white;
+
+  width: 302px;
+  height: 305px;
 }
 .telephone-down{
   color: #323232;
@@ -379,6 +494,27 @@ a{
   font-size: 12px;
   line-height: 18px;
   color: #fefefe;
+}
+
+.footer-social{
+  display: flex;
+  justify-content: space-between;
+}
+.twitter{
+  height: 31px;
+  width: 31px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 100px;
+}
+
+.feedback{
+  width: 478px;
+  height: 443px;
 }
 /*FOOTER*/
 
@@ -516,12 +652,3 @@ a{
   color: #000000;
 }
 /*catalog.html*/
-
-
-/*Для сеток*/
-.header{
-  margin-bottom: 50px;
-  min-height: 74px;
-  border-bottom: 1px solid black;
-}
-/*Для сеток*/
