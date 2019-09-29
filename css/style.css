@@ -8,6 +8,7 @@ body {
   font-weight: normal;
   color: #ffffff;
   background-color: #849d8f;
+  width: 1200px;
 }
 
 a{
@@ -105,52 +106,34 @@ a{
 /*GLOBAL*/
 
 /*HEADER*/
-/*для сеток*/
 .header-container{
-  min-height: 72px;
   border-bottom: 2px solid red;
-  width: 1140px;
 }
 .navigation{
   display: flex;
   flex-direction: row;
-
-  min-height: 45px;
   border-bottom: 3px solid black;
 }
 .header-logo{
   margin: 0;
-  margin-left: 25px;
   padding: 0;
-
   outline: 2px solid yellow;
+}
+
+.site-navigation, 
+.user-navigation{
+  list-style: none;
 }
 .site-navigation{
   margin:0;
   padding: 0;
   margin-left: 20px;
-
   min-height: 45px;
   outline: 2px solid yellow;
-}
-.catalog-navigation form{
-  width: 143px;
-  height: 171px;
-}
-.user-navigation{
-  margin:0;
-  padding: 0;
-  width: 270px;
-
-  min-height: 45px;
-  margin-left: auto;
-  outline: 2px solid yellow;
-}
-/*для сеток*/
-
-.site-navigation, 
-.user-navigation{
-  list-style: none;
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  align-items: center;
 }
 .site-navigation-link{
   color: white;
@@ -173,9 +156,19 @@ a{
   box-shadow: inset 0 2px 1px 0 #696969;
   border-bottom: none;
 }
+.site-navigation-link:hover ~ .catalog-navigation,
+.site-navigation-link:focus ~ .catalog-navigation{
+  display: block;
+}
 
 .catalog-navigation{
   list-style: none;
+  display: none;
+  position: absolute;
+}
+.catalog-navigation form{
+  width: 143px;
+  height: 171px;
 }
 .catalog-navigation-item{
   background-color: #f8f7f4;
@@ -193,13 +186,23 @@ a{
   border-radius: 0;
   box-shadow: none;
 }
-
 .novelty{
   font-weight: bold;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 
+.user-navigation{
+  margin:0;
+  padding: 0;
+  width: 270px;
+  min-height: 45px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  outline: 2px solid yellow;
+  align-items: center;
+}
 .user-navigation-link{
   font-weight: 500;
   color: #ffffff;
@@ -213,10 +216,20 @@ a{
   border-radius: 5px;
 }
 
+.search-form{
+  display: none;
+}
 .search-input{
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+}
+.enter-link:hover ~ .enter-form{
+  display: block;
+}
+.enter-form{
+  display: none;
+  position: absolute;
 }
 .email-input,
 .password-input{
@@ -224,7 +237,6 @@ a{
   font-size: 16px;
   line-height: 24px;
 }
-
 .registration-button{
   font-size: 18px
 }
@@ -236,47 +248,20 @@ a{
 /*HEADER*/
 
 /*MAIN*/
-/*для сеток*/
-.promo-two-by-one{
-  min-height: 570px;
-  outline: 2px solid blue;
-}
-
-.promo-gift{
-  display: flex;
-  justify-content: space-between;
-  outline: 2px solid red;
-}
-.promo-gift-block-1{
-  width: 560px;
-  height: 229px;
-  outline: 2px solid yellow;
-
-  background-image: none;
-}
-.promo-gift-block-2{
-  width: 560px;
-  height: 229px;
-  outline: 2px solid yellow;
-
-  background-image: none;
-}
-/*для сеток*/
-
-.main-container{
-  width: 1140px;
-}
-
 .work-time-telephone{
   text-align: right;
+  font-weight: bold;
 }
 .work-time{
   font-size: 14px;
+  line-height: 16px;
+  margin: 0;
 }
 .telephone-up{
   color: white;
   font-size: 22px;
   line-height: 24px;
+  font-weight: bold;
 }
 .telephone-up:hover,
 .telephone-up:focus{
@@ -284,6 +269,9 @@ a{
   border-bottom: 1px solid rgb(255, 188, 158, 0.3);
 }
 
+.promo-two-by-one{
+  outline: 2px solid blue;
+}
 .promo-two-by-one-list{
   list-style: none;
 }
@@ -291,6 +279,7 @@ a{
   font-weight: bold;
   line-height: 60px;
   font-size: 60px;
+  text-align: center;
 }
 .promo-button{
   font-size: 32px;
@@ -344,8 +333,38 @@ a{
   line-height: 24px;
 }
 
+.promo-gift{
+  display: flex;
+  justify-content: space-between;
+  outline: 2px solid red;
+}
+.promo-gift div{
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 560px;
+  height: 229px;
+  outline: 2px solid yellow;
+}
+
 .hits-list{
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  outline: 2px solid black;
+  justify-content: space-around;
+}
+.hits-li{
+  width: 267px;
+  height: 440px;
+  outline: 2px solid yellow;
+}
+.hits-li:hover,
+.hits-li:focus{
+  background-color: rgba(248, 247, 244, 0.4);
+}
+.hits-li:hover ~ .quick-view-button,
+.hits-li:focus ~ .quick-view-button{
+  display: block;
 }
 .product-price{
   font-size: 45px;
@@ -364,17 +383,8 @@ a{
   font-size: 16px;
   line-height: 22px;
 }
-.hits-list{
-  display: flex;
-  outline: 2px solid black;
-  justify-content: space-between;
-
-}
-.hits-li{
-  width: 267px;
-  height: 440px;
-
-  outline: 2px solid yellow;
+.quick-view-button{
+  display: none;
 }
 
 .advantages{
@@ -382,11 +392,8 @@ a{
   background-repeat: no-repeat;
   color: #323232;
   border-radius: 15px;
-
   display: flex;
   flex-direction: column;
-  width: 1146px;
-  height: 306px;
   outline: 2px solid red;
 }
 .advantages h3{
@@ -395,10 +402,10 @@ a{
 }
 .advantages-list{
   list-style:none;
+  display: flex;
 }
-.hits-li:hover,
-.hits-li:focus{
-  background-color: rgba(248, 247, 244, 0.4);
+.advantage{
+  width: 475;
 }
 
 .news-subscription{
@@ -508,8 +515,7 @@ a{
 .footer-links{
   display: flex;
   justify-content: space-between;
-  width: 200px;
-  height: 100px;
+  width: 500px;
 }
 
 .feedback{
