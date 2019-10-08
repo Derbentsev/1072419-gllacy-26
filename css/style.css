@@ -64,10 +64,13 @@ a{
   font-weight: bold;
   border: none;
 
-  padding-top: 14px;
+
+
+
+/*   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 21px;
-  padding-right: 21px;
+  padding-right: 21px; */
 }
 .button:focus,
 .button:hover{
@@ -135,8 +138,7 @@ a{
   display: flex;
 }
 .header-logo{
-  margin: 0;
-  padding: 0;
+  margin-top: 9px;
   outline: 2px solid yellow;
 }
 
@@ -147,7 +149,7 @@ a{
 .site-navigation{
   margin:0;
   padding: 0;
-  margin-left: 20px;
+  margin-left: 24px;
   min-height: 45px;
   display: flex;
   align-items: center;
@@ -161,7 +163,9 @@ a{
   margin-right: 27px;
 }
 .navigation-link:hover,
-.navigation-link:focus{
+.navigation-link:focus,
+.user-link:hover,
+.user-link:focus{
   border-radius: 15px;
   color: #323232;
   text-decoration: none;
@@ -172,7 +176,8 @@ a{
   padding-left: 14px;
   padding-right: 14px;
 }
-.navigation-link:active{
+.navigation-link:active,
+.user-link:active{
   border-radius: 15px;
   color: #323232;
   background-color: #ededed;
@@ -247,11 +252,28 @@ a{
   outline: 2px solid yellow;
 }
 
+.user-link{
+  color: #ffffff;
+  padding-right: 17px;
+  padding-left: 16px;
+  padding-top: 7px;
+  padding-bottom: 6px;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.user-link:first-child{
+  margin-right: 9px;
+}
+
 .search-link{
   height: 30px;
   width: 30px;
   display: block;
   border-radius: 50%;
+  background-image: url("../img/svg/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-color: rgb(255, 255, 255, 0.2);
   margin-right: 10px;
 }
@@ -312,6 +334,7 @@ a{
   display: flex;
   flex-wrap: wrap;
 }
+
 .email-input,
 .password-input{
   font-weight: 400;
@@ -335,6 +358,11 @@ a{
   font-weight: bold;
   position: absolute;
   right: 380px;
+  top: 73px;
+}
+.work-time-telephone p:last-child{
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 .work-time{
   font-size: 14px;
@@ -360,21 +388,28 @@ a{
 }
 .promo-two-by-one-list{
   list-style: none;
-  margin-top: -100px;
+  margin-top: -80px;
 }
 .promo-text{
   font-weight: bold;
   line-height: 60px;
   font-size: 60px;
   margin: 0;
+  margin-bottom: 30px;
 }
 .promo-button{
+  border-radius: 70px;
   font-size: 32px;
   line-height: 60px;
   line-height: 44px;
+  padding-left: 41px;
+  padding-right: 43px;
+  padding-top: 17px;
+  padding-bottom: 16px;
 }
 .promo-slide{
   background-repeat: no-repeat;
+  background-position: 10px 0;
   text-align: center;
   padding-top: 400px;
   padding-bottom: 110px;
@@ -388,8 +423,13 @@ a{
 .promo-slide-three{
   background-image: url("../img/png/ice-cream-font-image-3.png");
 }
+.promo-slide-two,
+.promo-slide-three{
+  display:none
+}
 
 .slide{
+  display: inline-block;
   width: 19px;
   height: 19px;
   border: 2px solid white;
@@ -398,6 +438,20 @@ a{
 }
 .slide:hover{
   background-color: rgb(248, 247, 244, 0.5);
+}
+.slide:checked{
+  background-color: rgb(255, 255, 266, 1);
+}
+
+.slider-controls{
+  position: absolute;
+  top: 550px;
+}
+
+#promo-radio-one:checked ~ .promo-two-by-one-list #slide-one,
+#promo-radio-two:checked ~ .promo-two-by-one-list #slide-two,
+#promo-radio-three:checked ~ .promo-two-by-one-list #slide-three{
+  display: block;
 }
 
 .raspberry{
@@ -409,23 +463,37 @@ a{
 .promo-gift-block{
   background-repeat: no-repeat;
   width: calc(100%/2 - 13px);
-  outline: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-bottom: 23px;
 }
 .promo-gift-name{
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
+  margin-left: 0px;
+  margin-top: 23px;
+  margin-bottom: 20px;
+  margin-right: 0px;
 }
 .promo-gift-text{
   font-size: 18px;
   line-height: 22px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 .promo-gift-button{
   font-size: 18px;
   line-height: 24px;
+  width: 189px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: 21px;
+  padding-top: 12px;
 }
-.section-wrapper{
+.section-wrapper-gift{
   display: flex;
   justify-content: space-between;
   outline: 2px solid red;
@@ -437,13 +505,16 @@ a{
   flex-wrap: wrap;
   padding: 0;
   width: calc(100% + 26px);
-  margin: 0 0 0 -13px;
+  margin: 0 0 0 0;
   outline: 2px solid black;
 }
 .hits-li{
-  width: 293px;
+  width: 267px;
   outline: 2px solid yellow;
-  text-align: center;
+  margin-right: 26px;
+}
+.hits-li:last-child{
+  margin-right: 0;
 }
 .hits-li:hover,
 .hits-li:focus{
@@ -452,8 +523,12 @@ a{
 .hits-li:hover .quick-view-button,
 .hits-li:focus .quick-view-button{
   display: block;
-  margin-bottom: -66px;
 }
+.hits-li p:nth-child(2){
+  margin-left: 26px;
+  margin-right: 26px;
+}
+
 .product-price{
   font-size: 45px;
   line-height: 45px;
@@ -473,6 +548,12 @@ a{
 }
 .quick-view-button{
   display: none;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .advantages{
@@ -498,7 +579,7 @@ a{
   width: 475px;
 }
 
-.section-wrapper{
+.section-wrapper-news{
   display: flex;
   justify-content: space-between;
   width: 1140px;

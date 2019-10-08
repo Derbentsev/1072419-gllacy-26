@@ -43,7 +43,7 @@
             <a href="" class="navigation-link">Доставка и оплата</a>
           </li>
           <li>
-            <a href="" class="navigation-link">О компании</a>
+            <a href="" class="navigation-link">О Компании</a>
           </li>
         </ul>
 
@@ -60,7 +60,7 @@
             </div>
           </li>
           <li>
-            <a href="" class="navigation-link enter-link">Вход</a>
+            <a href="" class="user-link enter-link">Вход</a>
             <div class="enter-form form">
               <form method="post" action="https://echo.htmlacademy.ru">
                 <p>
@@ -78,7 +78,7 @@
             </div>
           </li>
           <li>
-            <a href="" class="navigation-link">Корзина</a>
+            <a href="" class="user-link">Корзина</a>
           </li>
         </ul>
       </nav>
@@ -93,21 +93,34 @@
     <main class="main-container">
       <section class="promo-two-by-one">
         <h2 class="visually-hidden">Акция - Дайте оба!</h2>
+
+        <input type="radio" id="promo-radio-one" class="visually-hidden" name="toggle" checked />
+        <input type="radio" id="promo-radio-two" class="visually-hidden" name="toggle" />
+        <input type="radio" id="promo-radio-three" class="visually-hidden" name="toggle" />
+
+        <div class="slider-controls">
+            <label for="promo-radio-one" class="slide"></label>
+            
+            <label for="promo-radio-two" class="slide"></label>
+
+            <label for="promo-radio-three" class="slide"></label>
+        </div>
         <ul class="promo-two-by-one-list">
-          <li class="promo-slide-one promo-slide">
+          <li class="promo-slide-one promo-slide" id="slide-one">
             <p class="promo-text">Крем-брюле и пломбир с малиновым джемом</p>
-            <a href="" class="button promo-button">Дайте оба!</a>
+            <a href="" class="button promo-button">Давайте оба!</a>
           </li>
-          <li class="promo-slide-two promo-slide">
+          <li class="promo-slide-two promo-slide" id="slide-two">
             <p class="promo-text">Шоколадный пломбир и лимонный сорбет</p>
-            <a href="" class="button promo-button">Дайте оба!</a>
+            <a href="" class="button promo-button">Давайте оба!</a>
           </li>
-          <li class="promo-slide-three promo-slide">
+          <li class="promo-slide-three promo-slide" id="slide-three">
             <p class="promo-text">Пломбир с помадкой и клубничный щербет</p>
-            <a href="" class="button promo-button">Дайте оба!</a>
+            <a href="" class="button promo-button">Давайте оба!</a>
           </li>
         </ul>
-        <button class="slide">
+
+<!--         <button class="slide">
           <span class="visually-hidden">Слайд 1</span>
         </button>
         <button class="slide">
@@ -115,10 +128,10 @@
         </button>
         <button class="slide">
           <span class="visually-hidden">Слайд 3</span>
-        </button>
+        </button> -->
       </section>
 
-      <section class="section-wrapper">
+      <section class="section-wrapper-gift">
         <h2 class="visually-hidden">Акция - Подарок при покупке</h2>
         <div class="promo-gift-block raspberry">
           <p class="promo-gift-name">Малинка даром!</p>
@@ -213,7 +226,7 @@
         </ul>
       </section>
 
-      <div class="section-wrapper">
+      <div class="section-wrapper-news">
         <section class="news">
           <h2>
             <a href="" class="link news-head">Новое в нашем блоге</a>

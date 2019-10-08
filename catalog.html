@@ -21,7 +21,7 @@
 
                 <ul class="site-navigation">
                     <li>
-                        <a href="" class="navigation-link catalog-link">Каталог</a>
+                        <a href="" class="site-navigation-link catalog-link">Каталог</a>
                         <ul class="catalog-navigation form">
                             <li>
                                 <a href="" class="catalog-navigation-item novelty">Новинки</a>
@@ -41,16 +41,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="" class="navigation-link">Доставка и оплата</a>
+                        <a href="" class="site-navigation-link">Доставка и оплата</a>
                     </li>
                     <li>
-                        <a href="" class="navigation-link">О комании</a>
+                        <a href="" class="site-navigation-link">О комании</a>
                     </li>
                 </ul>
 
                 <ul class="user-navigation">
                     <li>
-                        <a href="" class="search-link">
+                        <a href="" class="user-navigation-link">
                             <span class="visually-hidden">Поиск</span>
                         </a>
                         <div class="search-form form">
@@ -61,8 +61,9 @@
                         </div>
                     </li>
                     <li>
-                        <a href="" class="navigation-link enter-link">Вход</a>
-                            <form class="enter-form form" method="post" action="https://echo.htmlacademy.ru">
+                        <a href="" class="user-navigation-link enter-link">Вход</a>
+                        <div class="enter-form form">
+                            <form method="post" action="https://echo.htmlacademy.ru">
                                 <p>
                                     <label for="email" class="visually-hidden">Логин</label>
                                     <input class="input email-input" type="email" id="email"
@@ -77,9 +78,10 @@
                                 <a href="" class="registration link-on-white">Забыли пароль</a>
                                 <a href="" class="registration link-on-white">Новая регистрация</a>
                             </form>
+                        </div>
                     </li>
                     <li>
-                        <a href="" class="navigation-link basket-link">Корзина</a>
+                        <a href="" class="user-navigation-link">Корзина</a>
                         <section class="basket">
                             <h2 class="visually-hidden">Ваш заказ</h2>
                                 <form method="post">
@@ -155,45 +157,38 @@
             </div>
 
             <ul class="bread-crumbs">
-                <li class="bread-crumbs-li">
+                <li>
                     <a class="bread-crumbs-item" href="index.html">Главная</a>
                 </li>
-                <span>&gt&gt</span>
-                <li class="bread-crumbs-li">
+                <li>
                     <a class="bread-crumbs-item" href="">Каталог</a>
                 </li>
-                <span>&gt&gt</span>
-                <li class="bread-crumbs-li-last">
+                <li>
                     <a class="bread-crumbs-item" href="">Сливочное</a>
                 </li>
             </ul>
 
-            <h1 class="catalog-h1">Сливочное мороженое</h1>
+            <h1>Сливочное мороженое</h1>
 
             <section>
                 <h2 class="visually-hidden">Фильтры и сортировки</h2>
-                <form class="filters-container" method="post" action="https://echo.htmlacademy.ru">
-                    <div>
+                <form method="post" action="https://echo.htmlacademy.ru">
                     <p class="filter-name">Сортировка:</p>
-                    <select class="filter-background">
+                    <select class="filter-by-popularity">
                         <option class="popularity" value="by_popular">по популярности</option>
                         <option class="popularity" value="cheap">сначала недорогие</option>
                         <option class="popularity" value="expensive">сначала дорогие</option>
                         <option class="popularity" value="by_fatness">по жирности</option>
                     </select>
-                </div>
 
-                <div>
                     <p class="filter-name">Цена:</p>
-                    <p class="filter-background">
+                    <p>
                         <label for="price-from" class="visually-hidden">Цена от</label>
                         <input class="filter-price" type="text" id="price-from" value="100" /> руб. -
                         <label for="price-to" class="visually-hidden">Цена до</label>
                         <input class="filter-price" type="text" id="price-to" value="500" /> руб.
                     </p>
-                </div>
 
-                <div>
                     <div class="line">
                         <button class="spinner-price">
                             <span class="visually-hidden">Цена от</span>
@@ -202,9 +197,7 @@
                             <span class="visually-hidden">Цена до</span>
                         </button>
                     </div>
-                </div>
 
-                    <div>
                     <p class="filter-name">Жирность:</p>
                     <div class="filter-background">
                         <input type="radio" name="fatness" id="fatness-1" value="0" /><label for="fatness-1">0%</label>
@@ -216,9 +209,7 @@
                             for="fatness-4">выше
                             30%</label>
                     </div>
-                </div>
 
-                    <div>
                     <p class="filter-name">Наполнители:</p>
                     <div class="filter-background">
                         <input type="checkbox" id="chocolate" checked /><label for="chocolate">шоколадные</label>
@@ -226,7 +217,6 @@
                         <input type="checkbox" id="syrup" /><label for="syrup">сиропы</label>
                         <input type="checkbox" id="jam" /><label for="jam">джемы</label>
                     </div>
-                </div>
 
                     <button class="filter-button" type="submit">Применить</button>
                 </form>
