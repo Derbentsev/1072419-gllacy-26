@@ -63,14 +63,6 @@ a{
   border-radius: 20px;
   font-weight: bold;
   border: none;
-
-
-
-
-/*   padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 21px;
-  padding-right: 21px; */
 }
 .button:focus,
 .button:hover{
@@ -132,6 +124,7 @@ a{
 
 /*HEADER*/
 .header-container{
+  position: relative;
   outline: 2px solid red;
 }
 .navigation{
@@ -252,6 +245,12 @@ a{
   outline: 2px solid yellow;
 }
 
+.user-navigation-text{
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
 .user-link{
   color: #ffffff;
   padding-right: 17px;
@@ -261,22 +260,42 @@ a{
   background-color: rgb(255, 255, 255, 0.2);
   border-radius: 15px;
 }
-
-.user-link:first-child{
+.user-navigation li{
   margin-right: 9px;
+}
+
+.user-navigation li:last-child{
+  margin-right: 0;
+}
+
+.search-link,
+.user-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-link{
   height: 30px;
   width: 30px;
-  display: block;
   border-radius: 50%;
-  background-image: url("../img/svg/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
   background-color: rgb(255, 255, 255, 0.2);
-  margin-right: 10px;
 }
+.search-link svg,
+.user-link svg{
+  fill: #fff;
+  stroke: #fff;
+}
+a:hover svg,
+a:focus svg{
+  fill: #323232;
+  stroke: #323232;
+}
+.svg-basket,
+.svg-enter{
+  margin-right: 8px;
+}
+
 .search-link:hover{
   background-color: #f8f7f4;
 }
@@ -354,10 +373,9 @@ a{
 }
 
 .work-time-telephone{
-  text-align: right;
   font-weight: bold;
   position: absolute;
-  right: 380px;
+  right: 0px;
   top: 73px;
 }
 .work-time-telephone p:last-child{
@@ -365,6 +383,7 @@ a{
   margin-bottom: 0;
 }
 .work-time{
+  text-align: right;
   font-size: 14px;
   line-height: 16px;
   margin: 0;
@@ -391,10 +410,12 @@ a{
   margin-top: -80px;
 }
 .promo-text{
+  width: 700px;
   font-weight: bold;
   line-height: 60px;
   font-size: 60px;
-  margin: 0;
+  text-align: center;
+  margin-left: 183px;
   margin-bottom: 30px;
 }
 .promo-button{
@@ -402,17 +423,21 @@ a{
   font-size: 32px;
   line-height: 60px;
   line-height: 44px;
-  padding-left: 41px;
-  padding-right: 43px;
-  padding-top: 17px;
-  padding-bottom: 16px;
+  width: 280px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 390px
 }
 .promo-slide{
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-position: 10px 0;
-  text-align: center;
-  padding-top: 400px;
-  padding-bottom: 110px;
+  padding-top: 335px;
+  padding-bottom: 90px;
+  padding-right: 200px;
 }
 .promo-slide-one{
   background-image: url("../img/png/ice-cream-font-image-1.png");
@@ -428,6 +453,10 @@ a{
   display:none
 }
 
+.slider-controls{
+  position: absolute;
+  top: 565px;
+}
 .slide{
   display: inline-block;
   width: 19px;
@@ -435,6 +464,7 @@ a{
   border: 2px solid white;
   border-radius: 50%;
   background-color: rgba(255,255,255, 0.0);
+  margin-right: 6px
 }
 .slide:hover{
   background-color: rgb(248, 247, 244, 0.5);
@@ -443,16 +473,11 @@ a{
   background-color: rgb(255, 255, 266, 1);
 }
 
-.slider-controls{
-  position: absolute;
-  top: 550px;
-}
-
-#promo-radio-one:checked ~ .promo-two-by-one-list #slide-one,
+/* #promo-radio-one:checked ~ .promo-two-by-one-list #slide-one,
 #promo-radio-two:checked ~ .promo-two-by-one-list #slide-two,
 #promo-radio-three:checked ~ .promo-two-by-one-list #slide-three{
   display: block;
-}
+} */
 
 .raspberry{
   background-image: url("../img/jpeg/raspberries-background.jpg");
@@ -461,11 +486,12 @@ a{
   background-image: url("../img/jpeg/chokolate-background.jpg");
 }
 .promo-gift-block{
+  border-radius: 15px;
   background-repeat: no-repeat;
   width: calc(100%/2 - 13px);
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
+  padding-left: 15px;
   padding-bottom: 23px;
 }
 .promo-gift-name{
@@ -473,8 +499,8 @@ a{
   line-height: 41px;
   font-weight: bold;
   margin-left: 0px;
-  margin-top: 23px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   margin-right: 0px;
 }
 .promo-gift-text{
@@ -482,19 +508,22 @@ a{
   line-height: 22px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 46px;
+  margin-bottom: 42px;
 }
 .promo-gift-button{
   font-size: 18px;
   line-height: 24px;
-  width: 189px;
   height: 45px;
   margin-left: auto;
-  margin-right: 21px;
+  margin-right: 29px;
   padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .section-wrapper-gift{
   display: flex;
+  margin-top: -65px;
   justify-content: space-between;
   outline: 2px solid red;
 }
@@ -512,6 +541,8 @@ a{
   width: 267px;
   outline: 2px solid yellow;
   margin-right: 26px;
+  margin-top: 40px;
+  padding-bottom: 28px;
 }
 .hits-li:last-child{
   margin-right: 0;
@@ -524,12 +555,20 @@ a{
 .hits-li:focus .quick-view-button{
   display: block;
 }
-.hits-li p:nth-child(2){
-  margin-left: 26px;
-  margin-right: 26px;
+
+.hits-svg{
+  position: absolute;
+}
+
+.product-img{
+  margin: 0;
 }
 
 .product-price{
+  margin: 0;
+  margin-top: -63px;
+}
+.price{
   font-size: 45px;
   line-height: 45px;
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
@@ -542,6 +581,12 @@ a{
   font-weight: bold;
 }
 .product-name{
+  margin: 0;
+  margin-top: 21px;
+  margin-bottom: 11px;
+  text-align: center;
+}
+.product-name a{
   color: white;
   font-size: 16px;
   line-height: 22px;
@@ -561,27 +606,47 @@ a{
   background-repeat: no-repeat;
   color: #323232;
   border-radius: 15px;
-  padding: 21px;
+  padding-top: 24px;
+  padding-left: 21px;
+  padding-right: 34px;
+  padding-bottom: 26px;
   outline: 2px solid red;
 }
 .advantages h3{
   font-size: 24px;
+  font-weight: 500;
   line-height: 30px;
   margin: 0;
 }
 .advantages-list{
   list-style:none;
   display: flex;
-  padding: 0;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 .advantage{
-  width: 475px;
+  display: flex;
+  width: calc(100%/2);
+}
+/* .advantage:nth-of-type(2n){
+  margin-left: 33px;
+} */
+.advantage p{
+  margin: 0;
+  margin-top: 23px;
+}
+.advantage svg{
+  margin-top: 10px;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
 
 .section-wrapper-news{
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
   width: 1140px;
 }
 .news{
@@ -591,15 +656,22 @@ a{
   border-radius: 15px;
   width: 560px;
   height: 220px;
+  padding-left: 20px;
   outline: 2px solid yellow;
 }
 .news-head{
+  margin: 0;
+}
+.news-head a{
   font-size: 16px;
   font-weight: 500;
   color: #323232;
   line-height: 22px;
 }
 .news-item{
+  width: 279px;
+}
+.news-item a{
   color: #323232;
   font-weight: bold;
   font-size: 24px;
