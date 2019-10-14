@@ -714,9 +714,9 @@ a{
 
 .subscription{
   border-radius: 10px;
-  background-image: url("../img/png/post-background.png");
-  background-repeat: no-repeat;
-  /* background-size: 100%; */
+  background: #f8f7f4 url("../img/png/post-background.png");
+/*   background-repeat: no-repeat;
+  background-size: 100%, 80%; */
   background-color: #f8f7f4;
   width: 560px;
   height: 220px;
@@ -936,6 +936,15 @@ a{
 
 
 /*catalog.html*/
+.current-catalog-page{
+  background-color: #d07058;
+}
+
+.user-link .svg-full-basket{
+  fill: none;
+  stroke: none;
+}
+
 .basket{
   width: 540px;
   background-color: #f8f7f4;
@@ -1095,6 +1104,11 @@ a{
   margin-right: 15px;
 }
 .page-number-current{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50%;
   background-color: #ffffff;
   color: #000000;
 }
@@ -1105,8 +1119,12 @@ a{
 }
 .page-number:hover,
 .page-number:focus{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #323232;
 }
 .page-number:active{
   background-color: rgba(255, 255, 255, 1);
