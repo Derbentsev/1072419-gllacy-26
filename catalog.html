@@ -21,7 +21,7 @@
 
                 <ul class="site-navigation">
                     <li>
-                        <a href="" class="navigation-link catalog-link">Каталог</a>
+                        <a href="" class="catalog-current navigation-link catalog-link">Каталог</a>
                         <ul class="catalog-navigation form">
                             <li class="catalog-navigation-item novelty">
                                 <a href="">Новинки</a>
@@ -88,15 +88,15 @@
                                 <a href="" class="registration-link new-registration-link">Новая регистрация</a>
                             </form>
                     </li>
-                    <li>
-                        <a href="" class="user-link">
+                    <li class="basket-li">
+                        <a href="" class="user-link basket-link">
                                 <span class="visually-hidden">Корзина</span>
                                 <svg class="svg-basket svg-full-basket" width="21" height="20" viewbox="0 0 21 20">
                                     <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z"/><circle fill="#343434" cx="6.984" cy="18" r="2"/><circle fill="#343434" cx="15.984" cy="18" r="2"/><path fill="#343434" d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
                                 </svg>
                                 <span class="user-navigation-text">2 товара</span>
                         </a>
-                        <section class="basket">
+                        <div class="basket">
                             <h2 class="visually-hidden">Ваш заказ</h2>
                                 <form method="post">
                                     <table class="basket-table">
@@ -156,7 +156,7 @@
                                     <button class="button basket-submit" type="submit">Оформить заказ</button>
                                     </div>
                                 </form>
-                        </section>
+                            </div>
                     </li>
                 </ul>
             </nav>
@@ -169,15 +169,15 @@
         </header>
 
         <main>
-            <ul class="bread-crumbs">
+            <ul class="breadcrumbs">
                 <li>
-                    <a class="bread-crumbs-item" href="index.html">Главная</a>
+                    <a class="breadcrumbs-item link" href="index.html">Главная</a>
                 </li>
                 <li>
-                    <a class="bread-crumbs-item" href="">Каталог</a>
+                    <a class="breadcrumbs-item link" href="">Каталог</a>
                 </li>
                 <li>
-                    <a class="bread-crumbs-item" href="">Сливочное</a>
+                    <a class="breadcrumbs-item link" href="">Сливочное</a>
                 </li>
             </ul>
 
@@ -185,9 +185,9 @@
 
             <section>
                 <h2 class="visually-hidden">Фильтры и сортировки</h2>
-                <form method="post" action="https://echo.htmlacademy.ru">
+                <form class="filters-container" method="post" action="https://echo.htmlacademy.ru">
                     <p class="filter-name">Сортировка:</p>
-                    <select class="filter-by-popularity">
+                    <select class="filter-by-popularity filter-background">
                         <option class="popularity" value="by_popular">по популярности</option>
                         <option class="popularity" value="cheap">сначала недорогие</option>
                         <option class="popularity" value="expensive">сначала дорогие</option>
@@ -197,38 +197,41 @@
                     <p class="filter-name">Цена:</p>
                     <p>
                         <label for="price-from" class="visually-hidden">Цена от</label>
-                        <input class="filter-price" type="text" id="price-from" value="100" /> руб. -
+                        <input class="filter-price" type="text" id="price-from" value="100" /> руб.
                         <label for="price-to" class="visually-hidden">Цена до</label>
                         <input class="filter-price" type="text" id="price-to" value="500" /> руб.
                     </p>
-
                     <div class="line">
-                        <button class="spinner-price">
+                        <button class="spinner-price spinner-price-from">
                             <span class="visually-hidden">Цена от</span>
                         </button>
-                        <button class="spinner-price">
+                        <button class="spinner-price spinner-price-to">
                             <span class="visually-hidden">Цена до</span>
                         </button>
                     </div>
 
                     <p class="filter-name">Жирность:</p>
-                    <div class="filter-background">
-                        <input type="radio" name="fatness" id="fatness-1" value="0" /><label for="fatness-1">0%</label>
-                        <input type="radio" name="fatness" id="fatness-2" value="10" checked /><label
-                            for="fatness-2">10%</label>
-                        <input type="radio" name="fatness" id="fatness-3" value="30" /><label
-                            for="fatness-3">30%</label>
-                        <input type="radio" name="fatness" id="fatness-4" value="more than 30" /><label
-                            for="fatness-4">выше
-                            30%</label>
+                    <div class="filter-background filter-fatness">
+                        <input class="visually-hidden fatness-input" type="radio" name="fatness" id="fatness-1" value="0" />
+                        <label for="fatness-1">0%</label>
+                        <input class="visually-hidden fatness-input" type="radio" name="fatness" id="fatness-2" value="10" checked />
+                        <label for="fatness-2">10%</label>
+                        <input class="visually-hidden fatness-input" type="radio" name="fatness" id="fatness-3" value="30" />
+                        <label for="fatness-3">30%</label>
+                        <input class="visually-hidden fatness-input" type="radio" name="fatness" id="fatness-4" value="more than 30" />
+                        <label for="fatness-4">выше 30%</label>
                     </div>
 
                     <p class="filter-name">Наполнители:</p>
-                    <div class="filter-background">
-                        <input type="checkbox" id="chocolate" checked /><label for="chocolate">шоколадные</label>
-                        <input type="checkbox" id="sugar" checked /><label for="sugar">сахарные присыпки</label>
-                        <input type="checkbox" id="syrup" /><label for="syrup">сиропы</label>
-                        <input type="checkbox" id="jam" /><label for="jam">джемы</label>
+                    <div class="filter-background filter-filler">
+                        <input class="visually-hidden filler-input" type="checkbox" id="filler-1" checked />
+                        <label for="filler-1">шоколадные</label>
+                        <input class="visually-hidden filler-input" type="checkbox" id="filler-2" checked />
+                        <label for="filler-2">сахарные присыпки</label>
+                        <input class="visually-hidden filler-input" type="checkbox" id="filler-3" />
+                        <label for="filler-3">сиропы</label>
+                        <input class="visually-hidden filler-input" type="checkbox" id="filler-4" />
+                        <label for="filler-4">джемы</label>
                     </div>
 
                     <button class="filter-button" type="submit">Применить</button>
