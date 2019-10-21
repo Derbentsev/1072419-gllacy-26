@@ -610,6 +610,7 @@ a{
   padding-right: 13px;
   padding-top: 6px;
   width: 293px;
+  border-radius: 5px;
   /* outline: 2px solid yellow; */
 /*   margin-right: 26px; */
 /*   margin-top: 40px; */
@@ -881,7 +882,7 @@ a{
   margin: 0;
   display: flex;
   justify-content: space-between;
-  width: 147px;
+  width: 200px;
 }
 .social-circle svg{
   display: block;
@@ -1019,6 +1020,12 @@ a{
 
 .current-catalog-page{
   background-color: #d07058;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .user-link .svg-full-basket{
@@ -1161,10 +1168,27 @@ a{
   -moz-appearance: none;
   appearance: none;
 }
-.sorting:hover,
+.filters:hover > .sorting,
+.filters:focus > .sorting{
+  color: #323232;
+}
+.filters:hover > .sorting-arrow,
+.filters:focus > .sorting-arrow{
+  fill: #323232;
+}
+.filters:active > .sorting:active{
+  background-color: #f8f7f4;
+}
+/* .sorting:hover,
 .sorting:focus{
   color: #323232;
 }
+.sorting:hover + .sorting-arrow,
+.sorting:focus + .sorting-arrow,
+.sorting-arrow:hover,
+.sorting-arrow:focus{
+  fill: #323232;
+} */
 /* .sorting:active{
   background-color: #f8f7f4;
 } */
@@ -1175,13 +1199,23 @@ a{
   color:#323232;
   background-color: rgb(255, 255, 255, 0.2);
 }
+.sorting-arrow{
+  position: absolute;
+  right: 16px;
+  top: 35px;
+  fill: white;
+}
 /* .sorting-default{
   font-weight: 500;
 } */
 
 .filters{
-  margin-left: 14px;
+  position: relative;
   outline: 1px solid yellow;
+}
+.filters:nth-of-type(2),
+.filters:nth-last-of-type(2){
+  margin-left: 14px;
 }
 .spinners{
 /*   position: relative; */
