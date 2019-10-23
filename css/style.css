@@ -550,10 +550,10 @@ a{
 }
 
 .raspberry{
-  background-image: url("../img/jpeg/raspberries-background.jpg");
+  background: #aa1a3d url("../img/jpeg/raspberries-background.jpg");
 }
 .choco{
-  background-image: url("../img/jpeg/chokolate-background.jpg");
+  background: #703d23 url("../img/jpeg/chokolate-background.jpg");
 }
 .promo-gift-block{
   border-radius: 15px;
@@ -681,7 +681,7 @@ a{
 }
 
 .advantages{
-  background-image: url("../img/png/wafer-background.png");
+  background: #e6d8b5 url("../img/png/wafer-background.png");
   color: #323232;
   border-radius: 15px;
   padding-top: 24px;
@@ -728,7 +728,7 @@ a{
   width: 1140px;
 }
 .news{
-  background-image: url("../img/png/news-background.png");
+  background: white url("../img/png/news-background.png");
   background-repeat: no-repeat;
   background-color: #f8f7f4;
   border-radius: 15px;
@@ -1194,6 +1194,7 @@ a{
 }
 .sorting{
   position: relative;
+  border: none;
 /*   z-index: 1; */
   border-radius: 30px;
   font-weight: 500;
@@ -1348,19 +1349,20 @@ a{
   left: -33px;
   width: 22px;
   height: 22px;
-  border: 3px solid #ffffff;
+  border: 4px solid #ffffff;
   border-radius: 50%;
   opacity: 0.8;
+  top: 0px;
 }
 .fatness-input:checked + label::after{
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #ffffff;
   border-radius: 50%;
-  left: -27px;
-  top: 5px;
+  left: -26px;
+  top: 7px;
   opacity: 0.8;
 }
 .filter-fatness label:hover::before,
@@ -1368,6 +1370,10 @@ a{
 .filter-fatness label:hover::after,
 .filter-fatness label:focus::after{
  opacity: 1;
+}
+.fatness-input:disabled + label::before,
+.fatness-input:disabled + label::after{
+  opacity: 0.4;
 }
 
 .filler-container{
@@ -1407,6 +1413,10 @@ a{
 .filter-filler label:hover::before,
 .filter-filler label:focus::before{
   opacity: 1;
+}
+.filler-input:disabled + label::before,
+.filler-input:disabled + label::after{
+  opacity: 0.4;
 }
 
 .page-number-list{
