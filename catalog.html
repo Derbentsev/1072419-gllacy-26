@@ -3,7 +3,7 @@
 
 <head>
     <title>Gllacy Shop</title>
-<!--     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <!--     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
         rel="stylesheet">
@@ -59,12 +59,10 @@
                                 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
                             </svg>
                         </a>
-                        <div class="search-form form">
-                            <form method="post" action="https://echo.htmlacademy.ru">
-                                <label for="search" class="visually-hidden">Строка поиска</label>
-                                <input class="input search-input" type="text" id="search" placeholder="Что ищем?" />
-                            </form>
-                        </div>
+                        <form method="post" class="search-form form" action="https://echo.htmlacademy.ru">
+                            <label for="search" class="visually-hidden">Строка поиска</label>
+                            <input class="input search-input" type="text" id="search" placeholder="Что ищем?" />
+                        </form>
                     </li>
                     <li>
                         <a href="" class="user-link enter-link">
@@ -104,57 +102,55 @@
                             </svg>
                             <span class="user-navigation-text">2 товара</span>
                         </a>
-                        <div class="basket">
+                        <form class="basket-form" method="post">
                             <h2 class="visually-hidden">Ваш заказ</h2>
-                            <form class="basket-form" method="post">
-                                <ul>
-                                    <li>
-                                            <button class="button-delete" type="button">
-                                                X
-                                                <span class="visually-hidden">Удалить товар из корзины</span>
-                                            </button>
+                            <ul class="basket-goods">
+                                <li class="basket-goods-item">
+                                    <button class="button-delete" type="button">
+                                        X
+                                        <span class="visually-hidden">Удалить товар из корзины</span>
+                                    </button>
 
-                                            <img src="img/png/product-1.png" alt="Пломбир с апельсиновым джемом"
-                                                height="33" width="33" />
+                                    <img src="img/png/product-1.png" alt="Пломбир с апельсиновым джемом" height="33"
+                                        width="33" />
 
-                                            <input class="basket-item basket-item-name" type="text"
-                                                value="Пломбир с апельсиновым джемом" readonly />
+                                    <input class="basket-item basket-item-name" type="text"
+                                        value="Пломбир с апельсиновым джемом" readonly />
 
-                                            <input class="basket-item basket-item-price" type="text"
-                                                value="1,5 кг x 200 руб." readonly />
+                                    <input class="basket-item basket-item-price" type="text" value="1,5 кг x 200 руб."
+                                        readonly />
 
-                                            <input class="basket-item basket-item-total" type="text" value="300 руб."
-                                                readonly />
-                                        </li>
-                                        <li>
-                                            <button class="button-delete" type="button">
-                                                X
-                                                <span class="visually-hidden">Удалить товар из корзины</span>
-                                            </button>
+                                    <input class="basket-item basket-item-total" type="text" value="300 руб."
+                                        readonly />
+                                </li>
+                                <li class="basket-goods-item">
+                                    <button class="button-delete" type="button">
+                                        X
+                                        <span class="visually-hidden">Удалить товар из корзины</span>
+                                    </button>
 
-                                            <img src="img/png/product-3.png"
-                                                alt="Клубничный пломбир с присыпкой из белого шоколада" height="33"
-                                                width="33" />
+                                    <img src="img/png/product-3.png"
+                                        alt="Клубничный пломбир с присыпкой из белого шоколада" height="33"
+                                        width="33" />
 
-                                            <input class="basket-item basket-item-name" type="text"
-                                                value="Клубничный пломбир с присыпкой из белого шоколада" readonly />
+                                    <input class="basket-item basket-item-name" type="text"
+                                        value="Клубничный пломбир с присыпкой из белого шоколада" readonly />
 
-                                            <input class="basket-item basket-item-price" type="text"
-                                                value="1,5 кг x 300 руб." readonly />
+                                    <input class="basket-item basket-item-price" type="text" value="1,5 кг x 300 руб."
+                                        readonly />
 
-                                            <input class="basket-item basket-item-total" type="text" value="450 руб."
-                                                readonly />
-                                        </li>
-                                        </ul>
-                                <div class="basket-line"></div>
-                                <div class="sum-wrapper">
-                                    <p>
-                                        <span class="basket-total">Итого: 750 руб.</span>
-                                    </p>
-                                    <button class="button basket-submit" type="submit">Оформить заказ</button>
-                                </div>
-                            </form>
-                        </div>
+                                    <input class="basket-item basket-item-total" type="text" value="450 руб."
+                                        readonly />
+                                </li>
+                            </ul>
+                            <div class="basket-line"></div>
+                            <div class="sum-wrapper">
+                                <p>
+                                    <span class="basket-total">Итого: 750 руб.</span>
+                                </p>
+                                <button class="button basket-submit" type="submit">Оформить заказ</button>
+                            </div>
+                        </form>
                     </li>
                 </ul>
             </nav>
@@ -517,18 +513,18 @@
 
             <ul class="footer-links">
                 <li class="footer-links-item">
-                  <a href="" class="for-suppliers link">Для поставщиков</a>
+                    <a href="" class="for-suppliers link">Для поставщиков</a>
                 </li>
                 <li class="footer-links-item">
-                  <a href="" class="link">Наши документы</a>
+                    <a href="" class="link">Наши документы</a>
                 </li>
                 <li class="footer-links-item">
-                  <a href="" class="link">О производстве</a>
+                    <a href="" class="link">О производстве</a>
                 </li>
                 <li class="footer-links-item">
-                  <a href="" class="link">Экологические стандарты</a>
+                    <a href="" class="link">Экологические стандарты</a>
                 </li>
-              </ul>
+            </ul>
 
             <div class="footer-copyright">
                 <a class="footer-academy-icon" href="https://htmlacademy.ru/intensive/htmlcss">
