@@ -3,7 +3,6 @@
 
 <head>
   <title>Gllacy Shop</title>
-<!--   <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
@@ -11,9 +10,9 @@
 </head>
 
 <body>
-  <div class="container">
     <h1 class="visually-hidden">Глейси - интернет-магазин мороженого</h1>
     <header class="header-container">
+        <div class="container">
       <nav class="navigation">
         <a class="header-logo">
           <img src="img/svg/logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
@@ -107,9 +106,11 @@
           <a class="telephone-up" href="tel:88124502525">8 812 450-25-25</a>
         </p>
       </div>
+    </div>
     </header>
-
+  
     <main class="main-container">
+        <div class="container">
       <section class="promo-two-by-one">
         <h2 class="visually-hidden">Акция - Дайте оба!</h2>
 
@@ -343,10 +344,12 @@
           </div>
         </section>
       </div>
+    </div>
 
       <iframe class="map" src="https://yandex.ru/map-widget/v1/-/CGDOu8Id" height="430">
       </iframe>
-
+      
+      <div class="container">
       <section class="map-wrapper">
         <h2 class="visually-hidden">Схема проезда и контакты</h2>
         <svg class="map-pin visually-hidden" width="80" height="140" viewbox="0 0 80 140">
@@ -368,9 +371,12 @@
           <a class="button feedback-button" href="form.html">Форма обратной связи</a>
         </div>
       </section>
-    </main>
+    
+    </div>
+  </main>
 
     <footer class="footer">
+        <div class="container">
       <ul class="footer-social">
         <li class="footer-social-item">
           <a href="" class="social-circle">
@@ -444,34 +450,37 @@
           &#169; 2019
         </p>
       </div>
+    </div>
     </footer>
 
     <!--Popup окна-->
-    <section class="feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <div class="modal-close"></div>
-      <p class="feedback-heading">Мы обязательно вам ответим!</p>
-      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
-        <p>
-          <label for="name-feedback" class="visually-hidden">Имя</label>
-          <input class="input feedback-input" type="text" id="name-feedback" name="login-feedback"
-            placeholder="Как вас зовут?"  />
-        </p>
-        <p>
-          <label for="email-feedback" class="visually-hidden">Email</label>
-          <input class="input feedback-input" type="email" id="email-feedback" name="email-feedback"
-            placeholder="Ваша почта для ответа?"  />
-        </p>
-        <p>
-          <label for="text-feedback" class="visually-hidden">Обратная связь</label>
-          <textarea class="textarea-feedback input" id="text-feedback" rows="5" placeholder="Напишите что-нибудь..."
-            ></textarea>
-        </p>
-        <button class="button feedback-button-submit" type="submit">Отправить</button>
-      </form>
-    </section>
+    <div class="popup-wrapper">
+      <section class="feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <div class="modal-close"></div>
+        <p class="feedback-heading">Мы обязательно вам ответим!</p>
+        <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+          <p>
+            <label for="name-feedback" class="visually-hidden">Имя</label>
+            <input class="input feedback-input" type="text" id="name-feedback" name="login-feedback"
+              placeholder="Как вас зовут?" />
+          </p>
+          <p>
+            <label for="email-feedback" class="visually-hidden">Email</label>
+            <input class="input feedback-input" type="email" id="email-feedback" name="email-feedback"
+              placeholder="Ваша почта для ответа?" />
+          </p>
+          <p>
+            <label for="text-feedback" class="visually-hidden">Обратная связь</label>
+            <textarea class="textarea-feedback input" id="text-feedback" rows="5"
+              placeholder="Напишите что-нибудь..."></textarea>
+          </p>
+          <button class="button feedback-button-submit" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
     <!--Popup окна-->
-  </div>
+
   <script src="js/popup.js"></script>
 </body>
 

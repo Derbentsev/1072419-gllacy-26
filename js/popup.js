@@ -4,6 +4,7 @@ var close = document.querySelector(".modal-close");
 var nameFeedback = document.querySelector("[name=login-feedback]");
 var emailFeedback = document.querySelector("[name=email-feedback]");
 var form = document.querySelector(".feedback-form");
+var wrapper = document.querySelector(".popup-wrapper");
 
 var isStorageSupport = true;
 var storageName = "";
@@ -19,6 +20,7 @@ catch(err){
 
 link.addEventListener("click", function(evt) {
     evt.preventDefault();
+    wrapper.classList.add("wrapper-show");
     popup.classList.add("modal-show");
     if(storageName){
         nameFeedback.value = storageName;
@@ -36,6 +38,7 @@ link.addEventListener("click", function(evt) {
 
 close.addEventListener("click", function(evt) {
     evt.preventDefault();
+    wrapper.classList.remove("wrapper-show");
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
 })
@@ -43,6 +46,7 @@ close.addEventListener("click", function(evt) {
 form.addEventListener("submit", function(evt) {
     if(!nameFeedback.value || !emailFeedback.value){
         evt.preventDefault();
+        wrapper.classList.remove("wrapper-show");
         popup.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
@@ -59,6 +63,7 @@ window.addEventListener("keydown", function(evt) {
     if(evt.keyCode === 27){
         evt.preventDefault();
         if(popup.classList.contains("modal-show")){
+            wrapper.classList.remove("wrapper-show");
             popup.classList.remove("modal-show");
             popup.classList.remove("modal-error");
         }
