@@ -24,13 +24,13 @@ a{
 }
 
 .visually-hidden {
-	position: absolute !important;
+	position: absolute;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1px;
 	overflow: hidden;
 }
 
@@ -896,6 +896,8 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   padding-bottom: 13px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: content-box;
+  width: 149px;
 }
 
 .advantages{
@@ -953,6 +955,22 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
       flex-shrink: 0;
 }
 
+.advantage-item:nth-of-type(1)::before{
+
+}
+
+.advantage-item:nth-of-type(2)::before{
+
+}
+
+.advantage-item:nth-of-type(3)::before{
+
+}
+
+.advantage-item:nth-of-type(4)::before{
+
+}
+
 .section-wrapper-news{
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,9 +1012,10 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
-  border-bottom-width: 2px;
+  text-decoration: underline;
+/*   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: #323232;
+  border-bottom-color: #323232; */
 }
 
 .subscription{
