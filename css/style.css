@@ -12,7 +12,7 @@ html{
 body {
   margin:0;
   padding:0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
@@ -34,9 +34,9 @@ a{
 	overflow: hidden;
 }
 
-select::-ms-expand { /*Убираем стандартную стрелочку в select у IE11*/
+/* select::-ms-expand {
   display: none;
-}
+} */
 
 .input{
   background-color: #ffffff;
@@ -45,31 +45,32 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   font-weight: bold;
   line-height: 24px;
   color: #323232;
+  padding-left: 12px;
 }
 
 .input::-webkit-input-placeholder{
   font-weight: 400;
   font-size: 16px;
   color: #999999;
-  padding-left: 13px;
 }
 
 .input:-ms-input-placeholder{
   font-weight: 400;
   font-size: 16px;
   color: #999999;
-  padding-left: 13px;
 }
 
-.input:hover,
+.input:hover{
+  box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
+  /* outline-color: rgb(77, 144, 254); */
+}
+
 .input:focus{
   box-shadow: 0 0 0 1px rgba(154, 154, 154, 0.52);
-  /* border: solid 2px rgba(154, 154, 154, 0.52); */
+  /* outline-color: rgb(77, 144, 254); */
+  outline: 2px solid rgb(77, 144, 254);
+/*   border-color: rgb(77, 144, 254); */
 }
-
-/* .input:focus{
-  border: solid 2px rgba(46, 136, 228, 0.52);
-} */
 
 .button{
   font: inherit;
@@ -364,6 +365,7 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .user-link{
@@ -401,10 +403,12 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   fill: #fff;
 }
 
-.user-navigation a:hover svg,
-.user-navigation a:focus svg,
-.user-navigation > li:hover svg,
-.user-navigation > li:focus svg{
+.search-link:hover svg,
+.search-link:focus svg,
+.user-link:hover svg,
+.user-link:focus svg,
+.user-navigation-item:hover svg,
+.user-navigation-item:focus svg{
   fill: #323232;
 }
 
@@ -415,7 +419,8 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 
 .search-link:hover,
 .search-link:focus,
-.user-navigation > li:hover > a{
+.user-navigation-item:hover > a,
+.user-navigation-item:focus > a{
   background-color: #f8f7f4;
   color: #323232;
 }
@@ -452,9 +457,9 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 .search-input{
   width: 311px;
   height: 44px;
-  font-weight: 400;
+/*   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 24px; */
 }
 
 .enter-form{
@@ -500,12 +505,12 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 
 .email-input,
 .password-input{
-  font-weight: 400;
+/*   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 24px; */
   width: 241px;
   height: 44px;
-  margin-bottom: 0px;
+/*   margin-bottom: 0px; */
 }
 
 .registration-button{
@@ -524,9 +529,6 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   font-size: 13px;
   color: #323232;
   font-weight: normal;
-/*   border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(50, 50, 50, 0.3); */
   color:#323232;
 }
 
@@ -546,7 +548,12 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 .registration-link:hover,
 .registration-link:active{
   color: #e84d37;
-  border-bottom: 1px solid rgba(232, 77, 55, 0.3);
+}
+
+.registration-link:focus::after,
+.registration-link:hover::after,
+.registration-link:active::after{
+  background-color: #e84d37;
 }
 
 .forgot-password-link{
@@ -776,7 +783,6 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 .promo-gift-button-1{
   font-size: 18px;
   line-height: 24px;
-  height: 45px;
   margin-left: 355px;
   margin-right: 5px;
   margin-top: 44px;
@@ -787,7 +793,6 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 .promo-gift-button-2{
   font-size: 18px;
   line-height: 24px;
-  height: 45px;
   margin-left: 329px;
   margin-right: 5px;
   margin-top: 44px;
@@ -945,7 +950,8 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 
 .advantage p{
   margin: 0;
-  margin-top: 23px;
+  margin-top: 24px;
+  margin-left: 55px;
 }
 
 .advantage svg{
@@ -955,20 +961,34 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
       flex-shrink: 0;
 }
 
-.advantage-item:nth-of-type(1)::before{
-
+.advantage-text{
+  position: relative;
 }
 
-.advantage-item:nth-of-type(2)::before{
-
+.advantage .advantage-text::before{
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -57px;
+  display: block;
+  width: 49px;
+  height: 49px;
 }
 
-.advantage-item:nth-of-type(3)::before{
-
+.advantage:nth-of-type(1) .advantage-text::before{
+  background-image: url("../img/svg/ice-cream.svg");
 }
 
-.advantage-item:nth-of-type(4)::before{
+.advantage:nth-of-type(2) .advantage-text::before{
+  background-image: url("../img/svg/cow.svg");
+}
 
+.advantage:nth-of-type(3) .advantage-text::before{
+  background-image: url("../img/svg/eco.svg");
+}
+
+.advantage:nth-of-type(4) .advantage-text::before{
+  background-image: url("../img/svg/thermometer.svg");
 }
 
 .section-wrapper-news{
@@ -1287,62 +1307,22 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 /*FOOTER*/
 
 /*POPUP*/
-@-webkit-keyframes bounce{
-  0%{
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
-  }
-  50%{
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
-  }
-  100%{
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
 @keyframes bounce{
   0%{
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px);
+/*     transform: translate(-50%, -50%); */
+            transform: translateY(-500px);
   }
   50%{
-    -webkit-transform: translateY(30px);
             transform: translateY(30px);
   }
   100%{
-    -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes shake{
-  0%,
-  100%{
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90%{
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60%,
-  80%{
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
   }
 }
 
 @keyframes shake{
   0%,
   100%{
-    -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   10%,
@@ -1350,40 +1330,41 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   50%,
   70%,
   90%{
-    -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
   }
   20%,
   40%,
   60%,
   80%{
-    -webkit-transform: translateX(10px);
             transform: translateX(10px);
   }
 }
 
 .popup-wrapper{
+  position: fixed;
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   z-index: 100;
 }
 
 .feedback{
   position: absolute;
-  display: none;
-  top: 50%;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+/*   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 1;
+  transform: translate(-50%, -50%); */
   background-color: #f8f7f4;
-  width: 478px;
   padding-left: 24px;
   padding-top: 15px;
   padding-right: 20px;
@@ -1397,33 +1378,32 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   display: block;
 }
 
-.modal-show{
-  display: block;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+.modal-show {
+  /*   display: block; */
+  animation-name: bounce;
+  animation-duration: 1s;
 }
 
-.modal-error{
+.modal-error {
   -webkit-animation-name: shake;
-          animation-name: shake;
+  animation-name: shake;
   -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .modal-close{
   position: absolute;
   top: 15px;
-  right: -3px;
-  width: 30px;
-  height: 30px;
+  right: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .modal-close::before,
 .modal-close::after{
   content: "";
   position: absolute;
+  left: 8px;
   display: block;
   background-color: black;
   height: 22px;
@@ -1463,14 +1443,12 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
-/*   padding-bottom: 13px; */
 }
 
 .textarea-feedback{
   border: solid 1px rgba(178, 178, 178, 0.52);
   border-radius: 5px;
   resize: none;
-  font-weight: 400;
   margin-bottom: 15px;
   width: 428px;
   height: 155px;
@@ -1623,7 +1601,7 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
 .button-delete{
   position: relative;
   border: none;
-  background-color: inherit;
+  background-color: transparent;
 }
 
 .line-delete{
@@ -1775,6 +1753,10 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.sorting::-ms-expand{
+  display: none;
 }
 
 .sorting-type{
@@ -1945,6 +1927,13 @@ select::-ms-expand { /*Убираем стандартную стрелочку 
   left: -26px;
   top: 6px;
   opacity: 0.8;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .fatness-input:checked + label::after {
+    height: 9px;
+    top: 5px;
+  }
 }
 
 .filter-fatness label:hover::before,

@@ -46,11 +46,9 @@ close.addEventListener("click", function(evt) {
 form.addEventListener("submit", function(evt) {
     if(!nameFeedback.value || !emailFeedback.value){
         evt.preventDefault();
-        wrapper.classList.remove("wrapper-show");
         popup.classList.remove("modal-error");
         popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
-        /* console.log("Нужно ввести Имя и Email"); */
     }
     else{
         if(isStorageSupport){
