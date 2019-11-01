@@ -1935,6 +1935,7 @@ a {
 .filter-fatness label::before {
   content: "";
   position: absolute;
+  top: -1px;
   left: -33px;
   width: 22px;
   height: 22px;
